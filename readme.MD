@@ -14,7 +14,7 @@ This web application streamlines the internship application process by automatic
 It intelligently parses your emails to identify **application statuses**, **company names**, and **job roles**, then organizes them into a clean, easy-to-use **Kanban board**.
 
 <p align="center">
-  <img src="./images/dashboard.png" width="600" alt="Dashboard preview">
+  <img src="./images/dashboard.png" width="900" alt="Dashboard preview">
 </p>
 
 
