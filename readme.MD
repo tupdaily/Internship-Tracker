@@ -1,123 +1,80 @@
-Internship Application Tracker
-Overview
-This web application helps streamline the internship application process by automatically tracking your applications directly from your Gmail account. It intelligently parses your emails to identify application statuses, company names, and job roles, then organizes them into a clean, easy-to-use Kanban board.
+# 🧭 Internship Application Tracker
 
-Features
-Automatic Tracking: Connects securely to your Gmail account to find and parse application-related emails.
+<div align="center">
 
-AI-Powered Parsing: Uses the Google Gemini API to accurately extract company and role information from email subjects, even with varied formats.
+A smart web app that automatically tracks and organizes your internship applications directly from Gmail — powered by AI.
 
-Kanban Dashboard: Visualizes your application pipeline with columns for "Applied," "Assessment," "Interview," "Offer," and "Rejected."
+</div>
 
-Latest Status Updates: Automatically consolidates multiple emails for the same role, ensuring only the most recent status is displayed.
+---
 
-Smart Filtering: Intelligently filters out irrelevant emails (like university course notifications) for a cleaner board.
+## 🧩 Overview
 
-Secure Authentication: Uses the official Google Identity Services (OAuth 2.0) for secure, read-only access to your emails.
+This web application streamlines the internship application process by automatically tracking your applications from your Gmail account.  
+It intelligently parses your emails to identify **application statuses**, **company names**, and **job roles**, then organizes them into a clean, easy-to-use **Kanban board**.
 
-How It Works
-The application follows a three-step process to build your dashboard:
+<p align="center">
+  <img src="https://placehold.co/800x450/1e293b/ffffff?text=Application+Dashboard" alt="Screenshot of the application dashboard"/>
+</p>
 
-Gmail API Scan: It first queries the Gmail API for all emails in the last 6 months containing keywords like "application," "interview," or "offer," while filtering out common irrelevant terms.
+---
 
-Gemini API Extraction: The subject lines of these emails are then sent in batches to the Google Gemini API. The AI model extracts the company name and job role from each subject and returns it as structured JSON.
+## ✨ Features
 
-Frontend Rendering: The application combines the company/role data from Gemini with a local keyword search on the email content to determine the application's status. This information is then used to render the final Kanban board.
+- 🔍 **Automatic Tracking** — Securely connects to your Gmail to find and parse application-related emails.  
+- 🤖 **AI-Powered Parsing** — Uses the **Google Gemini API** to accurately extract company and role information from varied email subjects.  
+- 🗂️ **Kanban Dashboard** — Visualizes your pipeline with columns for “Applied,” “Assessment,” “Interview,” “Offer,” and “Rejected.”  
+- 🔁 **Latest Status Updates** — Consolidates multiple emails for the same role to show only the most recent status.  
+- 🧠 **Smart Filtering** — Filters out irrelevant emails (like university notifications) for a cleaner board.  
+- 🔐 **Secure Authentication** — Uses **Google Identity Services (OAuth 2.0)** for safe, read-only access to emails.
 
-Setup and Installation
-To run this project locally, you will need to set up a project in the Google Cloud Console and get three separate credentials.
+---
 
-Prerequisites
-Visual Studio Code (or any other code editor).
+## 🛠️ Technologies Used
 
-The Live Server extension for VS Code.
+**Frontend:**  
+- HTML5  
+- CSS3  
+- Vanilla JavaScript  
 
-Step-by-Step Instructions
-Clone or Download the Repository:
-Get the three project files (index.html, style.css, script.js) and place them in a single folder on your computer.
+**APIs:**  
+- Google Gmail API  
+- Google Gemini API  
+- Google Identity Services (OAuth 2.0)  
 
-Create a Google Cloud Project:
+**Icons:**  
+- [Lucide Icons](https://lucide.dev)
 
-Go to the Google Cloud Console.
+---
 
-Create a new project.
+## ⚙️ How It Works
 
-Enable the Gmail API:
+The app follows a **three-step process** to build your dashboard:
 
-In your new project, navigate to APIs & Services > Library.
+1. **Gmail API Scan**  
+   - Queries the Gmail API for recent emails (last 6 months) with keywords like `"application"`, `"interview"`, or `"offer"`.  
+   - Filters out irrelevant terms.
 
-Search for "Gmail API" and click Enable.
+2. **Gemini API Extraction**  
+   - Sends email subjects in batches to the **Gemini API**, which extracts the **company name** and **role title** as structured JSON.
 
-Create OAuth 2.0 Client ID (for Gmail):
+3. **Frontend Rendering**  
+   - Combines extracted data with local keyword analysis of the email content.  
+   - Determines each application’s **current status** and renders the **Kanban board** dynamically.
 
-Go to APIs & Services > OAuth consent screen.
+---
 
-Choose External user type and fill in the required app information (app name, user support email).
+## 🚀 Setup and Installation
 
-Under Test users, add the Google email addresses you want to test the app with.
+### 🧰 Prerequisites
 
-Now, go to APIs & Services > Credentials.
+- [Visual Studio Code](https://code.visualstudio.com/) (or any code editor)  
+- The **Live Server** VS Code extension  
 
-Click + CREATE CREDENTIALS and select OAuth client ID.
+---
 
-Choose Web application as the application type.
+### ⚡ Step-by-Step Instructions
 
-Under Authorized JavaScript origins, add http://localhost:5500 and http://127.0.0.1:5500.
+#### 1. Clone or Download the Repository
 
-Under Authorized redirect URIs, add http://localhost:5500 and http://127.0.0.1:5500.
-
-Click Create. Copy the Client ID.
-
-Create an API Key (for Gmail):
-
-In Credentials, click + CREATE CREDENTIALS and select API key.
-
-Copy the key.
-
-Click on the new key to edit it. Under API restrictions, select Restrict key and choose the Gmail API.
-
-Create a Gemini API Key:
-
-Go to Google AI Studio.
-
-Click Get API key and create a key in your Google Cloud Project.
-
-Copy the key.
-
-Add Credentials to script.js:
-
-Open the script.js file.
-
-Paste your three keys into the corresponding constants at the top of the file:
-
-const GMAIL_API_KEY = 'YOUR_GMAIL_API_KEY_HERE';
-const CLIENT_ID = 'YOUR_CLIENT_ID_HERE';
-const GEMINI_API_KEY = 'YOUR_GEMINI_API_KEY_HERE';
-
-Launch the Application:
-
-Open the project folder in VS Code.
-
-Right-click the index.html file and select Open with Live Server.
-
-Technologies Used
-Frontend: HTML5, CSS3, Vanilla JavaScript
-
-APIs:
-
-Google Gmail API
-
-Google Gemini API
-
-Google Identity Services (OAuth 2.0)
-
-Icons: Lucide Icons
-
-Future Improvements
-[ ] Allow users to manually add or edit applications.
-
-[ ] Implement a backend server to securely store API keys instead of client-side.
-
-[ ] Add drag-and-drop functionality to the Kanban board.
-
-[ ] Integrate with Google Calendar to automatically add interview dates.
+Download or clone this repository, and place the three project files in a single folder:
