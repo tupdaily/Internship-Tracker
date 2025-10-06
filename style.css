@@ -1,0 +1,30 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+/* Custom scrollbar for better aesthetics */
+.kanban-column::-webkit-scrollbar {
+    width: 6px;
+}
+.kanban-column::-webkit-scrollbar-track {
+    background: #2d3748; /* slate-800 */
+}
+.kanban-column::-webkit-scrollbar-thumb {
+    background: #4a5568; /* slate-600 */
+    border-radius: 3px;
+}
+.kanban-column::-webkit-scrollbar-thumb:hover {
+    background: #718096; /* slate-500 */
+}
+/* Simple spinner animation */
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #ffffff;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
