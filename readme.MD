@@ -1,4 +1,4 @@
-# 🧭 Internship Application Tracker
+# Internship Application Tracker
 
 <div align="center">
 
@@ -8,18 +8,19 @@ A smart web app that automatically tracks and organizes your internship applicat
 
 ---
 
-## 🧩 Overview
+## Overview
 
 This web application streamlines the internship application process by automatically tracking your applications from your Gmail account.  
 It intelligently parses your emails to identify **application statuses**, **company names**, and **job roles**, then organizes them into a clean, easy-to-use **Kanban board**.
 
 <p align="center">
-  <img src="https://placehold.co/800x450/1e293b/ffffff?text=Application+Dashboard" alt="Screenshot of the application dashboard"/>
+  <img src="./images/dashboard.png" width="600" alt="Dashboard preview">
 </p>
+
 
 ---
 
-## ✨ Features
+## Features
 
 - 🔍 **Automatic Tracking** — Securely connects to your Gmail to find and parse application-related emails.  
 - 🤖 **AI-Powered Parsing** — Uses the **Google Gemini API** to accurately extract company and role information from varied email subjects.  
@@ -30,7 +31,7 @@ It intelligently parses your emails to identify **application statuses**, **comp
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 **Frontend:**  
 - HTML5  
@@ -61,20 +62,3 @@ The app follows a **three-step process** to build your dashboard:
 3. **Frontend Rendering**  
    - Combines extracted data with local keyword analysis of the email content.  
    - Determines each application’s **current status** and renders the **Kanban board** dynamically.
-
----
-
-## 🚀 Setup and Installation
-
-### 🧰 Prerequisites
-
-- [Visual Studio Code](https://code.visualstudio.com/) (or any code editor)  
-- The **Live Server** VS Code extension  
-
----
-
-### ⚡ Step-by-Step Instructions
-
-#### 1. Clone or Download the Repository
-
-Download or clone this repository, and place the three project files in a single folder:
